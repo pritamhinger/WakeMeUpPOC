@@ -8,12 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		48A9D1861DABA3FE006F0885 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A9D1851DABA3FE006F0885 /* AppDelegate.swift */; };
-		48A9D1881DABA3FE006F0885 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A9D1871DABA3FE006F0885 /* ViewController.swift */; };
 		48A9D18B1DABA3FE006F0885 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48A9D1891DABA3FE006F0885 /* Main.storyboard */; };
 		48A9D18D1DABA3FE006F0885 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48A9D18C1DABA3FE006F0885 /* Assets.xcassets */; };
 		48A9D1901DABA3FE006F0885 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48A9D18E1DABA3FE006F0885 /* LaunchScreen.storyboard */; };
 		48A9D19B1DABA3FE006F0885 /* Wake_Me_UpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A9D19A1DABA3FE006F0885 /* Wake_Me_UpTests.swift */; };
 		48A9D1A61DABA3FE006F0885 /* Wake_Me_UpUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A9D1A51DABA3FE006F0885 /* Wake_Me_UpUITests.swift */; };
+		48A9D1B41DABCFB4006F0885 /* EventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A9D1B31DABCFB4006F0885 /* EventsTableViewController.swift */; };
+		48A9D1B61DABED78006F0885 /* CalendarsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A9D1B51DABED78006F0885 /* CalendarsTableViewController.swift */; };
+		48A9D1B81DABEDA6006F0885 /* EditEventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A9D1B71DABEDA6006F0885 /* EditEventTableViewController.swift */; };
+		48A9D1BA1DABEE41006F0885 /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A9D1B91DABEE41006F0885 /* DatePickerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +39,6 @@
 /* Begin PBXFileReference section */
 		48A9D1821DABA3FE006F0885 /* Wake Me Up.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Wake Me Up.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		48A9D1851DABA3FE006F0885 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		48A9D1871DABA3FE006F0885 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		48A9D18A1DABA3FE006F0885 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		48A9D18C1DABA3FE006F0885 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		48A9D18F1DABA3FE006F0885 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +49,10 @@
 		48A9D1A11DABA3FE006F0885 /* Wake Me UpUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Wake Me UpUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		48A9D1A51DABA3FE006F0885 /* Wake_Me_UpUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wake_Me_UpUITests.swift; sourceTree = "<group>"; };
 		48A9D1A71DABA3FE006F0885 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		48A9D1B31DABCFB4006F0885 /* EventsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsTableViewController.swift; sourceTree = "<group>"; };
+		48A9D1B51DABED78006F0885 /* CalendarsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarsTableViewController.swift; sourceTree = "<group>"; };
+		48A9D1B71DABEDA6006F0885 /* EditEventTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditEventTableViewController.swift; sourceTree = "<group>"; };
+		48A9D1B91DABEE41006F0885 /* DatePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,11 +104,14 @@
 			isa = PBXGroup;
 			children = (
 				48A9D1851DABA3FE006F0885 /* AppDelegate.swift */,
-				48A9D1871DABA3FE006F0885 /* ViewController.swift */,
 				48A9D1891DABA3FE006F0885 /* Main.storyboard */,
 				48A9D18C1DABA3FE006F0885 /* Assets.xcassets */,
 				48A9D18E1DABA3FE006F0885 /* LaunchScreen.storyboard */,
 				48A9D1911DABA3FE006F0885 /* Info.plist */,
+				48A9D1B31DABCFB4006F0885 /* EventsTableViewController.swift */,
+				48A9D1B51DABED78006F0885 /* CalendarsTableViewController.swift */,
+				48A9D1B71DABEDA6006F0885 /* EditEventTableViewController.swift */,
+				48A9D1B91DABEE41006F0885 /* DatePickerViewController.swift */,
 			);
 			path = "Wake Me Up";
 			sourceTree = "<group>";
@@ -256,8 +265,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				48A9D1881DABA3FE006F0885 /* ViewController.swift in Sources */,
+				48A9D1B81DABEDA6006F0885 /* EditEventTableViewController.swift in Sources */,
+				48A9D1BA1DABEE41006F0885 /* DatePickerViewController.swift in Sources */,
+				48A9D1B41DABCFB4006F0885 /* EventsTableViewController.swift in Sources */,
 				48A9D1861DABA3FE006F0885 /* AppDelegate.swift in Sources */,
+				48A9D1B61DABED78006F0885 /* CalendarsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

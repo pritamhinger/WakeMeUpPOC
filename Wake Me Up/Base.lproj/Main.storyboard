@@ -8,7 +8,7 @@
         <!--Events-->
         <scene sceneID="k5d-zr-bMx">
             <objects>
-                <tableViewController id="gkF-BX-hEW" sceneMemberID="viewController">
+                <tableViewController id="gkF-BX-hEW" customClass="EventsTableViewController" customModule="Wake_Me_Up" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="ugc-W0-DRA">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -45,8 +45,16 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Events" id="qds-AP-Pqy">
-                        <barButtonItem key="leftBarButtonItem" title="Calenders" id="26m-Ig-SRq"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="k8d-Qb-dVF"/>
+                        <barButtonItem key="leftBarButtonItem" title="Calenders" id="26m-Ig-SRq">
+                            <connections>
+                                <action selector="showCalendars:" destination="gkF-BX-hEW" id="SzP-EK-MWG"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="k8d-Qb-dVF">
+                            <connections>
+                                <action selector="createEvent:" destination="gkF-BX-hEW" id="K0i-WS-wAK"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <segue destination="F0h-an-Npj" kind="show" identifier="idSegueCalendars" id="r9I-lM-av1"/>
@@ -57,10 +65,10 @@
             </objects>
             <point key="canvasLocation" x="1695" y="-415"/>
         </scene>
-        <!--Calenders-->
+        <!--Calendars-->
         <scene sceneID="qZr-Dp-EAP">
             <objects>
-                <tableViewController id="F0h-an-Npj" sceneMemberID="viewController">
+                <tableViewController id="F0h-an-Npj" customClass="CalendarsTableViewController" customModule="Wake_Me_Up" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Om9-TD-SHB">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -104,8 +112,12 @@
                             <outlet property="delegate" destination="F0h-an-Npj" id="OgW-5W-df6"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Calenders" id="9v0-cL-Zw2">
-                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="VId-aK-8Gl"/>
+                    <navigationItem key="navigationItem" title="Calendars" id="9v0-cL-Zw2">
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="VId-aK-8Gl">
+                            <connections>
+                                <action selector="editCalendars:" destination="F0h-an-Npj" id="gxC-Q5-69g"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xUu-78-2Xg" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -115,7 +127,7 @@
         <!--Edit Event-->
         <scene sceneID="Tmm-1b-jV8">
             <objects>
-                <tableViewController id="bvs-Nh-b1x" sceneMemberID="viewController">
+                <tableViewController id="bvs-Nh-b1x" customClass="EditEventTableViewController" customModule="Wake_Me_Up" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="QDG-SI-FSz">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -160,7 +172,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Edit Event" id="WWd-gu-yMJ">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="6ml-FU-AOH"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="6ml-FU-AOH">
+                            <connections>
+                                <action selector="saveEvent:" destination="bvs-Nh-b1x" id="vMx-PH-S3i"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <segue destination="fJV-zT-zQ4" kind="show" identifier="idSegueDatepicker" id="Uuv-pU-r16"/>
@@ -170,10 +186,10 @@
             </objects>
             <point key="canvasLocation" x="2517" y="113"/>
         </scene>
-        <!--View Controller-->
+        <!--Date Picker View Controller-->
         <scene sceneID="owL-Dd-qPy">
             <objects>
-                <viewController id="fJV-zT-zQ4" sceneMemberID="viewController">
+                <viewController id="fJV-zT-zQ4" customClass="DatePickerViewController" customModule="Wake_Me_Up" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="EEf-8v-SPs"/>
                         <viewControllerLayoutGuide type="bottom" id="qNG-OB-jKw"/>
