@@ -17,6 +17,7 @@
 		48A9D1B61DABED78006F0885 /* CalendarsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A9D1B51DABED78006F0885 /* CalendarsTableViewController.swift */; };
 		48A9D1B81DABEDA6006F0885 /* EditEventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A9D1B71DABEDA6006F0885 /* EditEventTableViewController.swift */; };
 		48A9D1BA1DABEE41006F0885 /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A9D1B91DABEE41006F0885 /* DatePickerViewController.swift */; };
+		48A9D1BC1DABFA31006F0885 /* EventManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A9D1BB1DABFA31006F0885 /* EventManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		48A9D1B51DABED78006F0885 /* CalendarsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarsTableViewController.swift; sourceTree = "<group>"; };
 		48A9D1B71DABEDA6006F0885 /* EditEventTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditEventTableViewController.swift; sourceTree = "<group>"; };
 		48A9D1B91DABEE41006F0885 /* DatePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
+		48A9D1BB1DABFA31006F0885 /* EventManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				48A9D1B51DABED78006F0885 /* CalendarsTableViewController.swift */,
 				48A9D1B71DABEDA6006F0885 /* EditEventTableViewController.swift */,
 				48A9D1B91DABEE41006F0885 /* DatePickerViewController.swift */,
+				48A9D1BB1DABFA31006F0885 /* EventManager.swift */,
 			);
 			path = "Wake Me Up";
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48A9D1BC1DABFA31006F0885 /* EventManager.swift in Sources */,
 				48A9D1B81DABEDA6006F0885 /* EditEventTableViewController.swift in Sources */,
 				48A9D1BA1DABEE41006F0885 /* DatePickerViewController.swift in Sources */,
 				48A9D1B41DABCFB4006F0885 /* EventsTableViewController.swift in Sources */,

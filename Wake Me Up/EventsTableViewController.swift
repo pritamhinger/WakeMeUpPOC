@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import EventKit
 
 class EventsTableViewController: UITableViewController, EditEventViewControllerDelegate {
 
@@ -14,6 +15,7 @@ class EventsTableViewController: UITableViewController, EditEventViewControllerD
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.performSelector(#selector(EventsTableViewController.requestAccessToEvents), withObject: nil, afterDelay: 1.4)
     }
 
     // MARK: - Table view data source
@@ -47,15 +49,29 @@ class EventsTableViewController: UITableViewController, EditEventViewControllerD
 
     // MARK: - IBActions
     @IBAction func showCalendars(sender: AnyObject) {
-    
+        if appDelegate?.eventManager?.eventsAccessGranted == true{
+            self.performSegueWithIdentifier("idSegueCalendars", sender: nil)
+        }
     }
     
     @IBAction func createEvent(sender: AnyObject) {
-        self.performSegueWithIdentifier("idSegueEvent", sender: nil)
+        if appDelegate?.eventManager?.eventsAccessGranted == true{
+            self.performSegueWithIdentifier("idSegueEvent", sender: nil)
+        }
     }
     
     func eventWasSuccessfullySaved() {
         print("Event Was Successfully Saved")
     }
     
+    func requestAccessToEvents() {
+        appDelegate?.eventManager?.eventStore.requestAccessToEntityType(EKEntityType.Event){(accessGranted:Bool, error:NSError?) in
+            if error == nil{
+                self.appDelegate?.eventManager?.eventsAccessGranted = accessGranted
+            }
+            else{
+                print("Error occured while requesting access to events store. Error is \(error?.localizedDescription)")
+            }
+        }
+    }
 }
