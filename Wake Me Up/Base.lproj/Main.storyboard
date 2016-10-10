@@ -186,7 +186,7 @@
             </objects>
             <point key="canvasLocation" x="2517" y="113"/>
         </scene>
-        <!--Date Picker View Controller-->
+        <!--Pick A Date-->
         <scene sceneID="owL-Dd-qPy">
             <objects>
                 <viewController id="fJV-zT-zQ4" customClass="DatePickerViewController" customModule="Wake_Me_Up" customModuleProvider="target" sceneMemberID="viewController">
@@ -198,17 +198,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="VUn-Qe-evQ">
-                                <rect key="frame" x="0.0" y="103" width="600" height="216"/>
-                                <date key="date" timeIntervalSinceReferenceDate="497793503.82200003">
-                                    <!--2016-10-10 11:58:23 +0000-->
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="VPJ-fd-uMl">
+                                <rect key="frame" x="0.0" y="77" width="600" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="497809433.71492898">
+                                    <!--2016-10-10 16:23:53 +0000-->
                                 </date>
                             </datePicker>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Pick A Date" id="cw5-Sf-C6m">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="8ek-dO-i0K">
+                            <connections>
+                                <action selector="acceptDate:" destination="fJV-zT-zQ4" id="scN-4S-QIC"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="dateTimePicker" destination="VPJ-fd-uMl" id="XR1-ki-cst"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L9f-np-DRh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

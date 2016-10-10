@@ -10,6 +10,8 @@ import UIKit
 
 class CalendarsTableViewController: UITableViewController {
 
+    private let appDelegate = UIApplication.sharedApplication().delegate as? AppDelegate
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }

@@ -10,6 +10,11 @@ import UIKit
 
 class DatePickerViewController: UIViewController {
 
+    var delegate: DatePickerViewControllerDelegate?
+    
+    @IBOutlet weak var dateTimePicker: UIDatePicker!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -24,4 +29,13 @@ class DatePickerViewController: UIViewController {
     }
     */
 
+    @IBAction func acceptDate(sender: AnyObject) {
+        delegate?.dateWasSelected(dateTimePicker.date)
+        self.navigationController?.popViewControllerAnimated(true)
+    }
+    
+}
+
+protocol DatePickerViewControllerDelegate {
+    func dateWasSelected(selectedDate: NSDate);
 }
