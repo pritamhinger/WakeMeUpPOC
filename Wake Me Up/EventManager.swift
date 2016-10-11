@@ -13,6 +13,7 @@ class EventManager: NSObject {
     
     private var _eventsAccessGranted:Bool = false
     private var _selectedCalendarIdentifier = ""
+    var arrCustomCalendarIdentifiers = NSMutableArray()
     
     var eventStore:EKEventStore
     
@@ -56,6 +57,13 @@ class EventManager: NSObject {
         else{
             selectedCalendarIdentifier = ""
         }
+        
+        if let customCalendarIdenfierList = userDefaults.valueForKey("eventkit_cal_identifiers") as? NSMutableArray{
+            arrCustomCalendarIdentifiers = NSMutableArray(array: customCalendarIdenfierList)
+        }
+        else{
+            arrCustomCalendarIdentifiers = NSMutableArray()
+        }
     }
     
     func getLocalEventCalendars() -> NSArray {
@@ -69,5 +77,29 @@ class EventManager: NSObject {
         }
         
         return localCalendars
+    }
+    
+    func saveCustomCalendarIdentifier(calendarIdentifier:String) {
+        arrCustomCalendarIdentifiers.addObject(calendarIdentifier)
+        let userDefaults = NSUserDefaults.standardUserDefaults()
+        userDefaults.setObject(arrCustomCalendarIdentifiers, forKey: "eventkit_cal_identifiers")
+    }
+    
+    func checkIfCalendarIsCustomWithIdentifier(calendarIdentifier:String) -> Bool {
+        var isCustomCalendar = false
+        for currentCalendarIdentifier in arrCustomCalendarIdentifiers {
+            if (currentCalendarIdentifier as! String) == calendarIdentifier{
+                isCustomCalendar = true
+                break
+            }
+        }
+        
+        return isCustomCalendar
+    }
+    
+    func removeCalendarIdentifier(calendarIdentifier:String) {
+        arrCustomCalendarIdentifiers.removeObject(calendarIdentifier)
+        let userDefault = NSUserDefaults.standardUserDefaults()
+        userDefault.setObject(arrCustomCalendarIdentifiers, forKey: "eventkit_cal_identifiers")
     }
 }
