@@ -102,4 +102,11 @@ class EventManager: NSObject {
         let userDefault = NSUserDefaults.standardUserDefaults()
         userDefault.setObject(arrCustomCalendarIdentifiers, forKey: "eventkit_cal_identifiers")
     }
+    
+    func getStringFromDate(date:NSDate) -> String {
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.locale = NSLocale.currentLocale()
+        dateFormatter.dateFormat = "d MMM yyyy, HH:mm"
+        return dateFormatter.stringFromDate(date)
+    }
 }
